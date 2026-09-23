@@ -22,17 +22,25 @@
       border: 1px solid #1c1c24;
       border-radius: 12px;
       padding: 35px 25px 20px 25px;
-      max-width: 420px;
+      max-width: 440px;
       width: 100%;
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
       text-align: left;
     }
-    .logo-container {
+    .logo-link {
+      display: block;
+      text-decoration: none;
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      transition: transform 0.15s ease;
     }
-    .logo-container svg {
-      width: 140px;
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+    .logo-link svg {
+      width: 100%;
+      max-width: 320px;
       height: auto;
     }
     .md-content h1 {
@@ -124,14 +132,17 @@
 <body>
 
   <div class="gui-card">
-    <!-- SVG recreation of your NexGen Logo image -->
-    <div class="logo-container">
-      <svg viewBox="0 0 300 300" xmlns="http://w3.org">
-        <text x="25" y="190" fill="#2b6cb0" font-family="sans-serif" font-size="165" font-weight="500">Gen</text>
-        <rect x="56" y="148" width="53" height="15" fill="#68d391" />
-        <text x="59" y="161" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold" letter-spacing="3">N·E·X</text>
+    <!-- Updated accurate logo structure pointing directly to nxgcorp.dpdns.org -->
+    <a href="https://nxgcorp.dpdns.org" class="logo-link" title="Go to nxgcorp.dpdns.org">
+      <svg viewBox="0 0 540 160" xmlns="http://w3.org">
+        <!-- Rounded Green N•E•X Container Badge -->
+        <rect x="10" y="15" width="235" height="130" rx="24" fill="#22c55e" />
+        <!-- Sharp centered N•E•X text -->
+        <text x="127" y="98" fill="#000000" font-family="-apple-system, sans-serif" font-size="64" font-weight="400" text-anchor="middle" letter-spacing="4">N·E·X</text>
+        <!-- Custom styled bright blue tracking typography for Gen -->
+        <text x="265" y="122" fill="#3b82f6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="140" font-weight="400">Gen</text>
       </svg>
-    </div>
+    </a>
 
     <!-- Strictly styled Markdown Content UI -->
     <div class="md-content">
@@ -153,7 +164,7 @@
       Verify & Redirect
     </a>
 
-    <!-- Custom Requested Markdown Footer Layout with Integrated GitHub Pages Logo -->
+    <!-- Markdown Footer Layout with Integrated GitHub Pages Logo -->
     <div class="footer-wrapper">
       <span>| NexGen Corp. &bull; 2026. &bull; All Rights Reserved. &bull; Powered by</span>
       <svg class="gh-logo" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
@@ -164,7 +175,7 @@
   </div>
 
   <script>
-    // 1. Generate an infinite random User ID block on load
+    // 1. Generate a random User ID block on load
     window.addEventListener('DOMContentLoaded', () => {
       const randomID = "NXG-" + Math.floor(100000 + Math.random() * 900000) + "-" + Math.random().toString(36).substring(2, 5).toUpperCase();
       const statusBox = document.getElementById('idStatus');
@@ -192,4 +203,4 @@
   </script>
 
 </body>
-          </html>
+</html>
