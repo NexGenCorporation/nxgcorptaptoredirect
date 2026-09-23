@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexGen Corp. HQ</title>
+  <style>
+    body {
+      background-color: #000000;
+      color: #f1f1f3;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .gui-card {
+      background: linear-gradient(145deg, #0b0b0d, #121217);
+      border: 1px solid #1c1c24;
+      border-radius: 12px;
+      padding: 35px 25px 20px 25px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+      text-align: left;
+    }
+    .logo-container {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .logo-container svg {
+      width: 140px;
+      height: auto;
+    }
+    .md-content h1 {
+      font-size: 20px;
+      color: #ffffff;
+      margin: 0 0 15px 0;
+      font-weight: 700;
+    }
+    .md-content h3 {
+      font-size: 15px;
+      color: #ffffff;
+      margin: 20px 0 10px 0;
+      font-weight: 600;
+    }
+    .md-content p {
+      color: #a0a0a8;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 15px 0;
+    }
+    .id-checker {
+      background: #14141a;
+      border-left: 3px solid #0078d4;
+      padding: 10px 15px;
+      margin: 15px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .id-checker p {
+      margin: 0;
+      font-family: monospace;
+      font-size: 13px;
+    }
+    .status-checking { color: #ffaa00; }
+    .status-success { color: #00cc66; font-weight: bold; }
+    
+    .md-content code {
+      background: #1a1a24;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #ff79c6;
+      font-size: 13px;
+      word-break: break-all;
+    }
+    .btn {
+      display: block;
+      background-color: #0078d4;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px;
+      font-weight: 600;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 25px;
+      transition: background-color 0.2s;
+      border: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .btn:active {
+      background-color: #005a9e;
+    }
+    .footer-wrapper {
+      margin-top: 35px;
+      border-top: 1px solid #1c1c24;
+      padding-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      color: #63636e;
+      font-size: 11px;
+      line-height: 1.4;
+      text-align: center;
+    }
+    .gh-logo {
+      width: 14px;
+      height: 14px;
+      fill: #63636e;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gui-card">
+    <!-- SVG recreation of your NexGen Logo image -->
+    <div class="logo-container">
+      <svg viewBox="0 0 300 300" xmlns="http://w3.org">
+        <text x="25" y="190" fill="#2b6cb0" font-family="sans-serif" font-size="165" font-weight="500">Gen</text>
+        <rect x="56" y="148" width="53" height="15" fill="#68d391" />
+        <text x="59" y="161" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold" letter-spacing="3">N·E·X</text>
+      </svg>
+    </div>
+
+    <!-- Strictly styled Markdown Content UI -->
+    <div class="md-content">
+      <h1># NexGen Corp. HQ NFC Tag Read!</h1>
+      <p>You read a physical NexGen Corp tag with your phone!</p>
+      
+      <!-- Instant Automated User ID Generation & Local Check Simulation -->
+      <div class="id-checker">
+        <p id="idStatus" class="status-checking">> Generating unique transaction ID...</p>
+      </div>
+
+      <h3>### What to do now:</h3>
+      <p>Click the button below to get redirected to the main website</p>
+      <p>If the button doesn't work, copy and paste this: <code>https://dpdns.org</code></p>
+    </div>
+    
+    <!-- Unified Native Action Trigger -->
+    <a href="mailto:?cc=realnexai@outlook.com&subject=NexGen%20NFC%20Tag%20Scan%20Log&body=Scan%20Registered.%20Unique%20Device%20Handshake%20Authorized." class="btn" id="nfcActionBtn">
+      Verify & Redirect
+    </a>
+
+    <!-- Custom Requested Markdown Footer Layout with Integrated GitHub Pages Logo -->
+    <div class="footer-wrapper">
+      <span>| NexGen Corp. &bull; 2026. &bull; All Rights Reserved. &bull; Powered by</span>
+      <svg class="gh-logo" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+        <path d="M8 0c4.42 0 8 3.58 8 8 0 3.54-2.29 6.53-5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+      </svg>
+      <span>GitHub Pages |</span>
+    </div>
+  </div>
+
+  <script>
+    // 1. Generate an infinite random User ID block on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const randomID = "NXG-" + Math.floor(100000 + Math.random() * 900000) + "-" + Math.random().toString(36).substring(2, 5).toUpperCase();
+      const statusBox = document.getElementById('idStatus');
+      
+      // Simulate validation loop
+      setTimeout(() => {
+        statusBox.innerHTML = `> Generated ID: <code>${randomID}</code><br><span class="status-checking">> Checking availability against system database...</span>`;
+        
+        setTimeout(() => {
+          statusBox.innerHTML = `> Generated ID: <code>${randomID}</code><br><span class="status-success">✓ ID Available & Locked to current session.</span>`;
+          
+          // Append the generated user ID straight into the email body text dynamically
+          const emailBtn = document.getElementById('nfcActionBtn');
+          emailBtn.href = `mailto:?cc=realnexai@outlook.com&subject=NexGen%20NFC%20Tag%20Scan%20Log&body=Scan%20Registered.%0A%0AUser%20ID%3A%20${randomID}%0A%0AScan%20Authorized%20successfully.%20Please%20press%20send%20to%20complete.`;
+        }, 800);
+      }, 600);
+    });
+
+    // 2. Handle immediate Mail Launcher execution alongside background URL redirection
+    document.getElementById('nfcActionBtn').addEventListener('click', function() {
+      setTimeout(function() {
+        window.location.href = "https://nxgcorp.dpdns.org";
+      }, 1200);
+    });
+  </script>
+
+</body>
+          </html>
