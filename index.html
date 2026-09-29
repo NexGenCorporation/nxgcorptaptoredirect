@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,7 +148,22 @@
     <!-- Strictly styled Markdown Content UI -->
     <div class="md-content">
       <h1># NexGen Corp. HQ NFC Tag Read!</h1>
-      <p>You read a physical NexGen Corp tag with your phone!</p>
+      <p>You read a physical NexGen Corp tag with your phone!
+      Copy your User ID and pin it in Clipboard:
+
+        <script>
+    // 1. Generate a random User ID block on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const randomID = "NXG-" + Math.floor(100000 + Math.random() * 900000) + "-" + Math.random().toString(36).substring(2, 5).toUpperCase();
+      const statusBox = document.getElementById('idStatus');
+      
+      // Simulate validation loop
+      setTimeout(() => {
+        statusBox.innerHTML = `> Generated ID: <code>${randomID}</code><br><span class="status-checking">> Checking availability against system database...</span>`;
+        
+        setTimeout(() => {
+          statusBox.innerHTML = `> Generated ID: <code>${randomID}</code><br><span class="status-success">✓ ID Available & Locked to current session.</span>`;
+        </script>
       
       <!-- Instant Automated User ID Generation & Local Check Simulation -->
       <div class="id-checker">
